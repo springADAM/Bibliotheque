@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="398.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="close" mnemonicParsing="false" onAction="#Close" text="Close" />
+                  <MenuItem fx:id="rmCostumer" mnemonicParsing="false" onAction="#RemoveCostumers" text="RemoveCostumers" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Books">
+            <items>
+                <MenuItem fx:id="add" mnemonicParsing="false" onAction="#Add" text="Add" />
+                <MenuItem fx:id="remove" mnemonicParsing="false" onAction="#Remove" text="Remove" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Historique">
+               <items>
+                  <MenuItem fx:id="Costumers" mnemonicParsing="false" onAction="#Costumers" text="Costumers" />
+                  <MenuItem fx:id="rentingHistory" mnemonicParsing="false" onAction="#RentingHistory" text="Renting History" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#About" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="234.0" prefWidth="398.0">
+         <children>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+               <items>
+                  <Pane prefHeight="50.0" prefWidth="158.0">
+                     <children>
+                        <Button fx:id="showButton" layoutX="31.0" layoutY="30.0" mnemonicParsing="false" onAction="#showBooks" text="Show Books" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="rentButton" layoutX="55.0" layoutY="30.0" mnemonicParsing="false" onAction="#Rent" text="Rent" />
+                     </children>
+                  </Pane>
+               </items>
+            </SplitPane>
+            <Pane prefHeight="181.0" prefWidth="238.0">
+               <children>
+                  <ImageView fitHeight="159.0" fitWidth="238.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Library.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="85.0" layoutY="6.0" text="The Power" />
+                  <Label layoutX="97.0" layoutY="159.0" text="of Java" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
